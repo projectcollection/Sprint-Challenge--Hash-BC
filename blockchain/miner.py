@@ -38,7 +38,10 @@ def valid_proof(last_hash, proof):
     """
 
     # TODO: Your code here!
-    pass
+    if last_hash[:6] == proof[6:]:
+        return True
+    else: 
+        return False
 
 
 if __name__ == '__main__':

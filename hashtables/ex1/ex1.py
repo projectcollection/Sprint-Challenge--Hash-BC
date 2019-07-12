@@ -23,7 +23,7 @@ def get_indices_of_item_weights(weights, length, limit):
             idx_a = weights.index(a)
             weights[idx_a] = -1
             idx_b = weights.index(b)
-            return (idx_b, idx_a) if a <= b else (idx_a, idx_b)
+            return (idx_b, idx_a) if idx_a < idx_b else (idx_a, idx_b)
             
         else:
             hash_table_insert(ht, weight, weight)
